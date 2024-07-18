@@ -10,7 +10,7 @@ MAIN_MENU() {
     echo -e "\n$1"
   fi
 
-  # print services we have
+  # print services we have already
   READ_SERVICE=$($PSQL "SELECT * FROM services ORDER BY service_id")
   echo "$READ_SERVICE" | while read SERVICE_ID BAR SERVICE_NAME
   do
